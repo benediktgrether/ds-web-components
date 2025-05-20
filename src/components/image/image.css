@@ -1,0 +1,5 @@
+.ds-image {
+    height: 12.5rem;
+    width: 18.75rem;
+    object-fit: cover;
+}

@@ -1,5 +1,5 @@
 @import "../../css/main.css";
-:host {
+/* :host {
     --button-primary__bg: #f863da;
     --button-primary__bg_hover: #c3099e;
     --button-primary__bg_disabled: #fbb1ec;
@@ -7,7 +7,7 @@
     --button-secondary__bg: #621fff;
     --button-secondary__bg_hover: #3d00cc;
     --button-secondary__bg_disabled: #b899ff;
-}
+} */
 
 .ds-button {
     display: inline-block;
@@ -22,27 +22,27 @@
 }
 
 .ds-button--primary {
-    background-color: var(--button-primary__bg);
+    background-color: var(--color-primary-500);
     color: #fff;
 
     &:hover {
-        background-color: var(--button-primary__bg_hover);
+        background-color: var(--color-primary-600);
     }
     &:disabled {
-        background-color: var(--button-primary__bg_disabled);
+        background-color: var(--color-primary-100);
         cursor: not-allowed;
     }
 }
 
 .ds-button--secondary {
-    background-color: var(--button-secondary__bg);
+    background-color: var(--color-secondary-500);
     color: #fff;
 
     &:hover {
-        background-color: var(--button-secondary__bg_hover);
+        background-color: var(--color-secondary-600);
     }
     &:disabled {
-        background-color: var(--button-secondary__bg_disabled);
+        background-color: var(--color-secondary-100);
         cursor: not-allowed;
     }
 }
