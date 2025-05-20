@@ -1,7 +1,5 @@
-import { Story } from '@storybook/web-components';
 import { html } from 'lit-html';
-import { DSButton } from './button';
-import "./button";
+import './button';
 
 export default {
     title: 'Components/Button',
@@ -14,4 +12,16 @@ export default {
             },
         },
     },
+};
+
+export const ButtonDefault = ({ variant }: { variant: 'primary' | 'secondary' }) => {
+    return html`
+        <ds-button variant=${variant}>
+            Default Button
+        </ds-button>
+    `;
+};
+
+ButtonDefault.args = {
+    variant: 'primary',
 };
