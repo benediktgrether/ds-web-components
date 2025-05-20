@@ -14,6 +14,7 @@
     "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
+    "lit-html": "^3.3.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-lit-css": "^2.1.0"
