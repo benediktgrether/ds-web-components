@@ -1,3 +1,4 @@
+@import "../../css/main.css";
 :host {
     --button-primary__bg: #f863da;
     --button-primary__bg_hover: #c3099e;
