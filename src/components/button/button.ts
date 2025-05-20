@@ -7,7 +7,7 @@ export class DSButton extends LitElement {
 
     render() {
         return html`
-            <button class="ds-button">
+            <button class="ds-button ds-button--primary">
                 <slot></slot>
             </button>
         `;
