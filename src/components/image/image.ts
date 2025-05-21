@@ -1,21 +1,21 @@
-import { LitElement, html, unsafeCSS } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import { classMap } from "lit-html/directives/class-map.js";
-import style from "./image.css";
+import { LitElement, html, unsafeCSS } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { classMap } from 'lit-html/directives/class-map.js';
+import style from '@css/main.css';
 
-@customElement("ds-image")
+@customElement('ds-image')
 export class DSImage extends LitElement {
     @property({ type: String, reflect: true })
-    src: string = "";
+    src: string = '';
 
     @property({ type: String, reflect: true })
-    alt: string = "";
+    alt: string = '';
 
     render() {
         const { src, alt } = this;
 
         const imageClasses = {
-            "ds-image": true,
+            'ds-image': true,
         };
 
         return html`

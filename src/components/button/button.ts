@@ -1,11 +1,10 @@
-import { LitElement, html,unsafeCSS } from 'lit';
+import { LitElement, html, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
-import style from '../../css/main.css';
+import style from '@css/main.css';
 
 @customElement('ds-button')
 export class DSButton extends LitElement {
-
     @property({ type: String, reflect: true })
     variant: 'primary' | 'secondary' = 'primary';
 

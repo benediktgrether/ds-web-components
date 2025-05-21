@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite + Lit + TS</title>
-        <link rel="stylesheet" href="./src/css/main.css" />
-        <script type="module" src="/src/index.ts"></script>
-    </head>
-    <body>
-        <div class="container mx-auto mt-4">
-            <ds-button variant="primary">Click me</ds-button>
-            <ds-button variant="secondary">Click me</ds-button>
-        </div>
-        <div class="container mx-auto mt-4">
-            <ds-image
-                src="https://picsum.photos/200/300"
-                alt="Sample Image"
-            ></ds-image>
-        </div>
-        <div class="container mx-auto mt-4">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <script type="module" src="/src/index.ts"></script>
+</head>
+
+<body>
+    <ds-container>
+        <ds-button variant="primary">Click me</ds-button>
+        <ds-button variant="secondary">Click me</ds-button>
+    </ds-container>
+    <ds-container>
+        <ds-image src="https://picsum.photos/200/300" alt="Sample Image"></ds-image>
+    </ds-container>
+    <ds-container>
         <ds-headline level="h1">Hello World</ds-headline>
-    </body>
+    </ds-container>
+</body>
+
 </html>

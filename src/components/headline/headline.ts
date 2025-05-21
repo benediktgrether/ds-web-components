@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { unsafeStatic } from 'lit/static-html.js';
 import { html as staticHtml } from 'lit/static-html.js';
-import style from './headline.css';
+import style from '@css/main.css';
 
 @customElement('ds-headline')
 export class DSHeadline extends LitElement {
@@ -20,7 +20,9 @@ export class DSHeadline extends LitElement {
             [`ds-headline--${this.size}`]: true,
         };
 
-        return staticHtml`<${tag} class=${classMap(classes)}><slot></slot></${tag}>`;
+        return staticHtml`<${tag} class=${classMap(
+            classes
+        )}><slot></slot></${tag}>`;
     }
 
     static styles = unsafeCSS(style);
