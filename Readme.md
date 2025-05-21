@@ -28,31 +28,31 @@ A modern Design System built with [Lit](https://lit.dev/), [Tailwind CSS](https:
 ### 1. Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### 2. Start development server
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ### 3. Open Storybook
 
 ```bash
-npm run storybook
+pnpm run storybook
 ```
 
 ### 4. Build for production
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ### 5. Build Storybook
 
 ```bash
-npm run build-storybook
+pnpm run build-storybook
 ```
 
 ---
@@ -128,13 +128,13 @@ import style from '@css/main.css';
 
 ## 🔧 Scripts
 
-| Script                    | Description                   |
-| ------------------------- | ----------------------------- |
-| `npm run dev`             | Start Vite dev server         |
-| `npm run build`           | Build project with TypeScript |
-| `npm run preview`         | Preview built app with Vite   |
-| `npm run storybook`       | Start Storybook in dev mode   |
-| `npm run build-storybook` | Build static Storybook site   |
+| Script                     | Description                   |
+| -------------------------- | ----------------------------- |
+| `pnpm run dev`             | Start Vite dev server         |
+| `pnpm run build`           | Build project with TypeScript |
+| `pnpm run preview`         | Preview built app with Vite   |
+| `pnpm run storybook`       | Start Storybook in dev mode   |
+| `pnpm run build-storybook` | Build static Storybook site   |
 
 ---
 
