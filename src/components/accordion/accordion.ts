@@ -8,15 +8,13 @@ export class DSAccordion extends LitElement {
     items!: NodeListOf<HTMLElement>;
 
     firstUpdated() {
-        // Initially open the first item
         const first = this.items[0] as any;
         if (first) first.open = true;
 
         this.addEventListener('accordion-toggle', (event: Event) => {
-            const targetTitle = (event as CustomEvent).detail.title;
-
+            const target = event.target as any;
             this.items.forEach((item: any) => {
-                item.open = item.title === targetTitle;
+                item.open = item === target;
             });
         });
     }

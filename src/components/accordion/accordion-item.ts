@@ -5,13 +5,11 @@ import style from '@css/main.css';
 
 @customElement('ds-accordion-item')
 export class DSAccordionItem extends LitElement {
-    @property({ type: String }) title = '';
     @property({ type: Boolean, reflect: true }) open = false;
 
     toggle() {
         this.dispatchEvent(
             new CustomEvent('accordion-toggle', {
-                detail: { title: this.title },
                 bubbles: true,
                 composed: true,
             })
@@ -26,14 +24,16 @@ export class DSAccordionItem extends LitElement {
                     class="w-full text-left px-4 py-3 font-medium bg-gray-100 hover:bg-gray-200"
                     aria-expanded=${this.open}
                 >
-                    ${this.title}
+                    <slot name="header"></slot>
                 </button>
                 <div
                     class="overflow-hidden"
-                    style="max-height: ${this.open ? '500px' : '0'}"
+                    style="max-height: ${this.open ? '500px' : '0'}; ${this.open
+                        ? 'transition: max-height 0.3s ease-in-out'
+                        : ''}"
                 >
                     <div class="p-4 bg-white">
-                        <slot></slot>
+                        <slot name="body"></slot>
                     </div>
                 </div>
             </div>
