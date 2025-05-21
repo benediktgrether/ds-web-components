@@ -96,7 +96,6 @@ CSS is organized under `src/css/`:
 
 -   `main.css`: Core utilities and Tailwind layer.
 -   `config/colors.css`: Custom color definitions.
--   Component-specific styles live in each component folder (e.g., `button.css`).
 
 ---
 
