@@ -15,10 +15,15 @@ export class DSHeadline extends LitElement {
 
     render() {
         const tag = unsafeStatic(this.level); // Converts string to static tag name
+
         const classes = {
-            'ds-headline': true,
-            [`ds-headline--${this.size}`]: true,
-        };
+            "text-4xl md:text-5xl lg:text-6xl font-bold" : this.level === 'h1',
+            "text-3xl md:text-4xl lg:text-5xl font-bold" : this.level === 'h2',
+            "text-2xl md:text-3xl lg:text-4xl font-semibold" : this.level === 'h3',
+            "text-xl md:text-2xl lg:text-3xl font-semibold" : this.level === 'h4',
+            "text-lg md:text-xl lg:text-2xl font-medium" : this.level === 'h5',
+            "text-base md:text-lg lg:text-xl font-medium" : this.level === 'h6',
+        }
 
         return staticHtml`<${tag} class=${classMap(
             classes
