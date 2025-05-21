@@ -29,7 +29,7 @@ export class DSAccordionItem extends LitElement {
                     ${this.title}
                 </button>
                 <div
-                    class="transition-[max-height] duration-300 overflow-hidden"
+                    class="overflow-hidden"
                     style="max-height: ${this.open ? '500px' : '0'}"
                 >
                     <div class="p-4 bg-white">
