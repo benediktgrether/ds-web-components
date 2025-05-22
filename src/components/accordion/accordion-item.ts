@@ -1,11 +1,13 @@
 import { LitElement, html, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-
+import { customElement, property, query } from 'lit/decorators.js';
 import style from '@css/main.css';
 
 @customElement('ds-accordion-item')
 export class DSAccordionItem extends LitElement {
     @property({ type: Boolean, reflect: true }) open = false;
+
+    @query('.body-wrapper')
+    bodyWrapper!: HTMLDivElement;
 
     toggle() {
         this.dispatchEvent(
@@ -14,6 +16,33 @@ export class DSAccordionItem extends LitElement {
                 composed: true,
             })
         );
+    }
+
+    updated(changedProps: Map<string, any>) {
+        if (changedProps.has('open')) {
+            this.animatePanel();
+        }
+    }
+
+    animatePanel() {
+        const panel = this.bodyWrapper;
+
+        if (!panel) return;
+
+        if (this.open) {
+            panel.style.display = 'block'; // in case it was hidden
+            const height = panel.scrollHeight;
+            panel.style.maxHeight = '0px';
+            panel.offsetHeight; // force reflow
+            panel.style.transition = 'max-height 0.3s ease';
+            panel.style.maxHeight = height + 'px';
+        } else {
+            panel.style.transition = 'max-height 0.3s ease';
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            requestAnimationFrame(() => {
+                panel.style.maxHeight = '0px';
+            });
+        }
     }
 
     render() {
@@ -44,10 +73,8 @@ export class DSAccordionItem extends LitElement {
                     </svg>
                 </button>
                 <div
-                    class="overflow-hidden"
-                    style="max-height: ${this.open ? '500px' : '0'}; ${this.open
-                        ? 'transition: max-height 0.3s ease-in-out'
-                        : ''}"
+                    class="body-wrapper overflow-hidden"
+                    style="max-height: 0; display: none;"
                 >
                     <div class="p-4 bg-white">
                         <slot name="body"></slot>
