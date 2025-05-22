@@ -8,5 +8,7 @@ export default {
 };
 
 export const Text = () => {
-    return html` <ds-text variant="{variant}">Default text</ds-text> `;
+    return html` <ds-text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque quia doloribus similique fugiat
+            voluptate nulla quaerat nesciunt illum nam delectus consequuntur illo, temporibus modi fugit saepe.
+            Provident eaque vero dignissimos.</ds-text> `;
 };
