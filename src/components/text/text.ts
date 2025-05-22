@@ -1,19 +1,19 @@
 import { LitElement, html, unsafeCSS } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import style from '@css/main.css';
 
-@customElement('ds-container')
-export class DSContainer extends LitElement {
+@customElement('ds-text')
+export class DSText extends LitElement {
     render() {
         const classes = {
-            'container mx-auto mt-4': true,
+            'text-base max-w-3xl': true,
         };
 
         return html`
-            <div class=${classMap(classes)}>
+            <p class=${classMap(classes)}>
                 <slot></slot>
-            </div>
+            </p>
         `;
     }
 
