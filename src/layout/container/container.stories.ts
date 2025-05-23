@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import './container';
 
 export default {
-    title: 'layout/container',
+    title: 'layout/Container',
     component: 'ds-container',
     argTypes: {},
 };
