@@ -5,9 +5,26 @@ import style from '@css/main.css';
 
 @customElement('ds-text')
 export class DSText extends LitElement {
+    @property({ type: String }) size = 'base';
+
     render() {
+        switch (this.size) {
+            case 'small':
+                this.size = 'text-sm';
+                break;
+            case 'normal':
+                this.size = 'text-base';
+                break;
+            case 'large':
+                this.size = 'text-lg';
+                break;
+            case 'extra-large':
+                this.size = 'text-xl';
+                break;
+        }
+
         const classes = {
-            'text-base max-w-3xl': true,
+            [`max-w-3xl ${this.size}`]: true,
         };
 
         return html`
