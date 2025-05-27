@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "moduleResolution": "node",
+      "verbatimModuleSyntax": false,
+      "allowImportingTsExtensions": false,
+      "baseUrl": ".",
+      "paths": {
+        "@components/*": ["src/components/*"],
+        "@css/*": ["src/css/*"],
+        "@layout/*": ["src/layout/*"]
+      }
+    }
+  }
+  

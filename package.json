@@ -1,32 +1,39 @@
 {
-  "name": "ds-web-components",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.7",
-    "lit": "^3.3.0",
-    "tailwindcss": "^4.1.7"
-  },
-  "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.6",
-    "@storybook/addon-essentials": "^8.6.14",
-    "@storybook/blocks": "^8.6.14",
-    "@storybook/experimental-addon-test": "^8.6.14",
-    "@storybook/test": "^8.6.14",
-    "@storybook/web-components": "^8.6.14",
-    "@storybook/web-components-vite": "^8.6.14",
-    "lit-html": "^3.3.0",
-    "storybook": "^8.6.14",
-    "typescript": "~5.8.3",
-    "vite": "^6.3.5",
-    "vite-plugin-lit-css": "^2.1.0"
-  }
+    "name": "ds-web-components",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build",
+        "test": "web-test-runner"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "^4.1.7",
+        "lit": "^3.3.0",
+        "tailwindcss": "^4.1.7"
+    },
+    "devDependencies": {
+        "@chromatic-com/storybook": "^3.2.6",
+        "@open-wc/testing": "^4.0.0",
+        "@rollup/plugin-alias": "^5.1.1",
+        "@storybook/addon-essentials": "^8.6.14",
+        "@storybook/blocks": "^8.6.14",
+        "@storybook/experimental-addon-test": "^8.6.14",
+        "@storybook/test": "^8.6.14",
+        "@storybook/web-components": "^8.6.14",
+        "@storybook/web-components-vite": "^8.6.14",
+        "@web/dev-server-esbuild": "^1.0.4",
+        "@web/test-runner": "^0.20.2",
+        "@web/test-runner-playwright": "^0.11.0",
+        "lit-html": "^3.3.0",
+        "playwright": "^1.52.0",
+        "storybook": "^8.6.14",
+        "typescript": "~5.8.3",
+        "vite": "^6.3.5",
+        "vite-plugin-lit-css": "^2.1.0"
+    }
 }
