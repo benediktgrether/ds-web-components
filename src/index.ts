@@ -7,3 +7,4 @@ export * from './layout/container';
 export * from './components/accordion';
 export * from './components/text';
 export * from './layout/grid';
+export * from './components/badge';
