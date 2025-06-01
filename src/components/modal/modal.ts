@@ -59,7 +59,7 @@ export class DSModal extends LitElement {
 
         return html`
             <div
-                class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                class="modal-overlay fixed inset-0 bg-black/50 flex items-center justify-center z-50"
                 @click=${this._handleOverlayClick}
                 role="dialog"
                 aria-modal="true"

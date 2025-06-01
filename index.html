@@ -120,11 +120,13 @@
         <ds-badge variant="info">Info</ds-badge>
     </ds-container>
     <ds-container spacer="32">
-        <ds-modal title="Delete Confirmation">
+        <ds-button event="open" target="#myModal" variant="primary">Open Modal</ds-button>
+        <ds-modal id="myModal" title="Hello">
             <div slot="body">
-                Are you sure you want to delete this item?
+                <p>This content is passed via slot.</p>
             </div>
             <div slot="footer">
+                <ds-button event="close" target="#myModal" variant="secondary">Close</ds-button>
             </div>
         </ds-modal>
     </ds-container>
