@@ -1,6 +1,5 @@
 import { LitElement, html, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { classMap } from 'lit-html/directives/class-map.js';
 import style from '@css/main.css';
 
 @customElement('ds-modal')
@@ -72,8 +71,8 @@ export class DSModal extends LitElement {
                     <div
                         class="modal-header flex justify-between items-center mb-4"
                     >
-                        <h2 id="modal-title" class="text-xl font-bold">
-                            ${this.title}
+                        <h2 id="modal-title" class="text-2xl font-bold">
+                            <slot name="header"> ${this.title} </slot>
                         </h2>
                         <button
                             class="close-button text-gray-500 hover:text-black text-2xl font-bold"

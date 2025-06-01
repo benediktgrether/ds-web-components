@@ -121,7 +121,10 @@
     </ds-container>
     <ds-container spacer="32">
         <ds-button event="open" target="#myModal" variant="primary">Open Modal</ds-button>
-        <ds-modal id="myModal" title="Hello">
+        <ds-modal id="myModal">
+            <div slot="header">
+                Modal Title
+            </div>
             <div slot="body">
                 <p>This content is passed via slot.</p>
             </div>
